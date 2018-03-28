@@ -2,5 +2,8 @@
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
 		<Project filename="src/libtrapi.cbp" />
+		<Project filename="tst/libtrapi.tst.cbp">
+			<Depends filename="src/libtrapi.cbp" />
+		</Project>
 	</Workspace>
 </CodeBlocks_workspace_file>
