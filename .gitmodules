@@ -1,0 +1,3 @@
+[submodule "libcpp-core"]
+	path = libcpp-core
+	url = git@odev:repo/libcpp-core.git
