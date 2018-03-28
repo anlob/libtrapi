@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
+		<Project filename="libcpp-core/src/libcpp-core.cbp" />
 		<Project filename="src/libtrapi.cbp" />
 		<Project filename="tst/libtrapi.tst.cbp">
+			<Depends filename="libcpp-core/src/libcpp-core.cbp" />
 			<Depends filename="src/libtrapi.cbp" />
 		</Project>
 	</Workspace>

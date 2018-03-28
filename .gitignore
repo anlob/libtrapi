@@ -1,3 +1,7 @@
 libtrapi.workspace.layout
 src/libtrapi.layout
 tst/libtrapi.tst.layout
+src/bin/
+src/obj/
+tst/bin/
+tst/obj/

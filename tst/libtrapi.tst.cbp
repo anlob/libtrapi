@@ -15,7 +15,9 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
+					<Add option="-Wl,-rpath,$(PROJECT_DIR)../libcpp-core/src/bin/Debug" />
 					<Add option="-Wl,-rpath,$(PROJECT_DIR)../src/bin/Debug" />
+					<Add directory="../libcpp-core/src/bin/Debug" />
 					<Add directory="../src/bin/Debug" />
 				</Linker>
 			</Target>
@@ -29,6 +31,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add directory="../libcpp-core/src/bin/Release" />
 					<Add directory="../src/bin/Release" />
 				</Linker>
 			</Target>
@@ -42,6 +45,7 @@
 			<Add option="-lssl" />
 			<Add option="-ljsoncpp" />
 			<Add library="libtrapi" />
+			<Add library="libcpp-core" />
 		</Linker>
 		<Unit filename="conf.h" />
 		<Unit filename="main.cpp" />
