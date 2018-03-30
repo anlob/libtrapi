@@ -47,6 +47,9 @@
 			<Add library="libtrapi" />
 			<Add library="libcpp-core" />
 		</Linker>
+		<ExtraCommands>
+			<Add before="$(PROJECT_DIR)/../libcpp-core/tools/mergeworktree.sh" />
+		</ExtraCommands>
 		<Unit filename="conf.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
