@@ -20,6 +20,9 @@
 					<Add directory="../libcpp-core/src/bin/Debug" />
 					<Add directory="../src/bin/Debug" />
 				</Linker>
+				<ExtraCommands>
+					<Add before="$(PROJECT_DIR)/../libcpp-core/tools/mergeworktree.sh" />
+				</ExtraCommands>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/tst" prefix_auto="1" extension_auto="1" />
@@ -34,6 +37,9 @@
 					<Add directory="../libcpp-core/src/bin/Release" />
 					<Add directory="../src/bin/Release" />
 				</Linker>
+				<ExtraCommands>
+					<Add before="$(PROJECT_DIR)/../libcpp-core/tools/mergeworktree.sh -c" />
+				</ExtraCommands>
 			</Target>
 		</Build>
 		<Compiler>
@@ -47,9 +53,6 @@
 			<Add library="libtrapi" />
 			<Add library="libcpp-core" />
 		</Linker>
-		<ExtraCommands>
-			<Add before="$(PROJECT_DIR)/../libcpp-core/tools/mergeworktree.sh" />
-		</ExtraCommands>
 		<Unit filename="conf.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
