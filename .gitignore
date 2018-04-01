@@ -5,3 +5,5 @@ src/bin/
 src/obj/
 tst/bin/
 tst/obj/
+src/libtrapi.depend
+tst/libtrapi.tst.depend
