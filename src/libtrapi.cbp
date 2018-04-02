@@ -68,6 +68,8 @@
 			<Add option="-std=c++11" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="common.cpp" />
+		<Unit filename="common.h" />
 		<Unit filename="libtrapi.cpp" />
 		<Unit filename="libtrapi.h" />
 		<Unit filename="version.h" />
