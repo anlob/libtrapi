@@ -1,23 +1,21 @@
+#ifndef TEST_COMMON_H_INCLUDED
+#define TEST_COMMON_H_INCLUDED
+
 #include "conf.h"
-#include "common.h"
-
-using namespace std;
 
 
-int main()
-{
 #if (_TEST_ALL == 1) || (_TEST_GRP_COMMON == 1) || (_TEST_COMMON_SHA256 == 1)
-  test_common_sha256();
+void test_common_sha256();
 #endif
 #if (_TEST_ALL == 1) || (_TEST_GRP_COMMON == 1) || (_TEST_COMMON_HMAC_SHA256 == 1)
-  test_common_hmac_sha256();
+void test_common_hmac_sha256();
 #endif
 #if (_TEST_ALL == 1) || (_TEST_GRP_COMMON == 1) || (_TEST_COMMON_B64_ENCODE == 1)
-  test_common_b64_encode();
+void test_common_b64_encode();
 #endif
 #if (_TEST_ALL == 1) || (_TEST_GRP_COMMON == 1) || (_TEST_COMMON_B64_DECODE == 1)
-  test_common_b64_decode();
+void test_common_b64_decode();
 #endif
 
-  return 0;
-}
+
+#endif // TEST_COMMON_H_INCLUDED

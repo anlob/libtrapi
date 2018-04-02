@@ -53,6 +53,8 @@
 			<Add library="libtrapi" />
 			<Add library="libcpp-core" />
 		</Linker>
+		<Unit filename="common.cpp" />
+		<Unit filename="common.h" />
 		<Unit filename="conf.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
