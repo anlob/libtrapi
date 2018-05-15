@@ -27,12 +27,25 @@ void test_common_hmac_sha256()
 #if (_TEST_ALL == 1) || (_TEST_GRP_COMMON == 1) || (_TEST_COMMON_B64_ENCODE == 1)
 void test_common_b64_encode()
 {
-
+    std::vector<unsigned char> data = {
+        '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+        '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+        '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+        '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+        '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+    };
+    string buf;
+    if (b64_encode(&buf, data) != "MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWYwMTIzNDU2Nzg5YWJjZGVmMDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=")
+        logexc << "b64_encode() returned bad encode" << endl;
 }
 #endif
 #if (_TEST_ALL == 1) || (_TEST_GRP_COMMON == 1) || (_TEST_COMMON_B64_DECODE == 1)
 void test_common_b64_decode()
 {
-
+    string data = "MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWYwMTIzNDU2Nzg5YWJjZGVmMDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=";
+    std::vector<unsigned char> buf;
+    b64_decode(&buf, data);
+    if ((buf.size() != 80) || (memcmp(buf.data(), "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef", 80) != 0))
+        logexc << "b64_decode() returned bad decode" << endl;
 }
 #endif
