@@ -41,6 +41,27 @@ const std::vector<unsigned char> &trapi::hmac_sha512(std::vector<unsigned char> 
   return *digest;
 }
 
+const std::vector<unsigned char> &trapi::hmac_sha256(std::vector<unsigned char> *digest, const std::vector<unsigned char> &data, const std::vector<unsigned char> &key)
+{
+  SSLInit sslInit;
+
+  unsigned int len = EVP_MAX_MD_SIZE;
+  digest->resize(len);
+
+  HMAC_CTX *ctx = HMAC_CTX_new();
+  //HMAC_CTX_init(&ctx);
+
+  HMAC_Init_ex(ctx, key.data(), key.size(), EVP_sha256(), NULL);
+  HMAC_Update(ctx, data.data(), data.size());
+  HMAC_Final(ctx, digest->data(), &len);
+  digest->resize(len);
+
+  HMAC_CTX_free(ctx);
+  //HMAC_CTX_cleanup(&ctx);
+
+  return *digest;
+}
+
 const std::string &trapi::b64_encode(std::string *buf, const std::vector<unsigned char> &data)
 {
   SSLInit sslInit;
