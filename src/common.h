@@ -1,3 +1,11 @@
+/** \file common.h
+ * Common stuff.
+ *
+ * \author Andreas Lobbes, andreas.lobbes@gmail.com
+ * \date 2018
+ * \copyright GPLV3 and above
+ * \see http://www.gnu.org/licenses
+ */
 #ifndef COMMON_H_INCLUDED
 #define COMMON_H_INCLUDED
 

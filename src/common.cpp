@@ -1,3 +1,11 @@
+/** \file common.cpp
+ * Common stuff.
+ *
+ * \author Andreas Lobbes, andreas.lobbes@gmail.com
+ * \date 2018
+ * \copyright GPLV3 and above
+ * \see http://www.gnu.org/licenses
+ */
 #include "common.h"
 #include "../libcpp-core/src/Log.h"
 #include "../libcpp-core/src/SSL.h"
