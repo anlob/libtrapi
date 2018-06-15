@@ -1,0 +1,6 @@
+libtrapi.layout
+libtrapi.depend
+bin
+obj
+doxygen/html
+doxygen/doxygen.log
